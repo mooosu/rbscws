@@ -2,7 +2,11 @@
 #include "ruby.h"
 #include "ruby/encoding.h"
 
+#ifdef __APPLE__
 #include "scws/scws.h"
+#else
+#include "scws.h"
+#endif
 #define _VERBOSE 1
 
 VALUE mScws;
